@@ -22,11 +22,11 @@ This project focuses on analyzing healthcare data to identify trends, patterns, 
 
 ### Data Source
 
-The data for this project was gotten from kaggle.com, it contains informations such as patient names, blood ytpe, hospitals, insurance provider, and admission types, among others. These datasets offer comprehensive information on patient care, and healthcare resource utilization.
+The data for this project was gotten from kaggle.com, it contains informations such as patient names, blood type, hospitals, insurance provider, and admission types, among others. These datasets offer comprehensive information on patient care, and healthcare resource utilization.
 
 ### Tools
 
-1. MySQL - Data Analysis
+1. PostgreSQL - Data Analysis
 2. Power BI - Data cleaning and Visualization
 
 ### Data Cleaning/Preparation
@@ -34,7 +34,7 @@ The data for this project was gotten from kaggle.com, it contains informations s
 Data cleaning and preparation involved multiple steps.
 1. Handled missing values using techniques like deletion of non-informative rows.
 2. Standardized categorical variables to ensure consistency across datasets.
-3. I created new features based on existing data to improve the quality of analysis.
+3. Created new features based on existing data to improve the quality of analysis.
 
 ### Exploratory Data Analysis (EDA)
 
