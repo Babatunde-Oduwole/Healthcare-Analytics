@@ -4,6 +4,7 @@
 
 ## Table of Contents
 
+- [limitations](#Limitations)
 - [Project Introduction](#Project-Introduction)
 - [Data Source](#Data-Source)
 - [Tools](#Tools)
@@ -31,7 +32,7 @@ The data for this project was gotten from kaggle.com, it contains informations s
 ### Data Cleaning/Preparation
 
 Data cleaning and preparation involved multiple steps.
-1. Handled missing values using techniques like mean imputation and deletion of non-informative rows.
+1. Handled missing values using techniques like deletion of non-informative rows.
 2. Standardized categorical variables to ensure consistency across datasets.
 3. I created new features based on existing data to improve the quality of analysis.
 
@@ -71,12 +72,10 @@ FROM admissions
 GROUP BY department;
 ```
 
-
 ### Findings
 Below are some of the finding discovered after analysis:
 1. The female gender constitutes the highest number of patients across all types of admission.
 2. The medical condition with highest number of patient are Asthma and cancer, this has continue to remain the same a period of 6 years.
-
 
 ### Recommendations
 
