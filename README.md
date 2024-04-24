@@ -17,70 +17,79 @@
 ### Project Introduction
 
 
-This business intelligence report aims to provide insight into the sales performance of a retail sales company over the past years, by analyzing various aspect of the sales data, identify trends, make data driven recommendations and gain a deeper understanding of the business performance. 
+This project focuses on analyzing healthcare data to identify trends, patterns, and insights that can be used to improve patient outcomes and operational efficiency. The visualization techniques used aim to transform complex datasets into meaningful insights for stakeholders in the healthcare industry.
 
 ### Data Source
 
-The primary dataset used for this analysis is the 'sales_dataset.csv' file, containing detailed information about sales made by the company.
+The data for this project was gotten from kaggle.com, it contains informations such as patient names, blood ytpe, hospitals, insurance provider, and admission types, among others. These datasets offer comprehensive information on patient care, and healthcare resource utilization.
 
 ### Tools
 
-1. Excel - Data Cleaning
-2. MySQL - Data Analysis
-3. Power BI - Visualization
+1. MySQL - Data Analysis
+2. Power BI - Data cleaning and Visualization
 
 ### Data Cleaning/Preparation
 
-In the initial data preparation phase, the following tasks were performed:
-1. Data loading and inspection.
-2. Handling missing values.
-3. Data cleaning and formatting.
+Data cleaning and preparation involved multiple steps.
+1. Handled missing values using techniques like mean imputation and deletion of non-informative rows.
+2. Standardized categorical variables to ensure consistency across datasets.
+3. I created new features based on existing data to improve the quality of analysis.
 
 ### Exploratory Data Analysis (EDA)
 
 EDA involved exploring the sales data to answer key questions, such as:
 
-1. What was the total revenue?
-2. What was the cost of sales?
-3. What the the profit?
-4. What was the profit margin?
-5. What was the revenue for each month?
-6. What was the revenue from each country?
-7. What product generated the highest revenue?
-8. What segment generated the highest revenue?
-9. What was the revenue by discount band?
+1. What was the total number of patients?
+2. What was the total number of doctors?
+3. What was the total amount of billing per month?
+4. What was the total amount of insuranve provider by gender?
+5. What was the total categories of blood group by gender?
+6. What was the admission type by gender?
+7. What was the medical condition by gender?
+8. What was the total number of patients by medical condition?
+9. What was the total number of doctors by admission type?
+10. What was the average age of patients by medical condition?
 
 ### Data Analysis
 
 Some of the interesting code/features worked with include:
 
 ```sql
-SELECT product, sales
-FROM sales_data;
+SELECT 
+    gender, 
+    medical_condition, 
+FROM 
+    healthcare_dataset
+GROUP BY 
+    gender, 
+    medical_condition;
 ```
 
 ```sql
-UPDATE sales_data 
-SET segment = COALESCE(segment, 0);
+SELECT department, COUNT(*) AS patient_count 
+FROM admissions 
+GROUP BY department;
 ```
+
 
 ### Findings
 Below are some of the finding discovered after analysis:
-1. The company's profit margin have been steadily increasing over the past years, with a noticeable peak during the month of August.
-2. The product "Paseo" was the best-performing product in terms of sales and revenue.
-3. When analysing the customer segment, it was discovered that the "Government" was the best customer with the high lifetime value (LTV) and should be targeted for marketing efforts.
+1. The female gender constitutes the highest number of patients across all types of admission.
+2. The medical condition with highest number of patient are Asthma and cancer, this has continue to remain the same a period of 6 years.
 
 
 ### Recommendations
 
 Based on the analysis, the following recommendations are suggested for actions:
 
-1. Invest in marketing and promotions during peak sales seasons to maximize revenue.
-2. Focus on expanding and promoting Paseo.
-3. Implement a customer segmentation strategy to target high-LTV customers effectively.
+1. More resources should be allocated to medical conditions with consistently high patient volumes.
+2. Further analysis is needed to determine the reason the females having the most number of patients across all types of admission.
+3. Further analysis is also needed to determine the reason for the high rate of patients with asthma, and cancer over the years (6 years) 
+
 
 ### Limitations
 
-I had to remove all zero values from all columns because they would have affected the accuracy of my conclusions from the analysis. There are still a few outliers even after the omissions but even then we can still see that there is a positive correlation between both product and revenue figures.
+1. Some datasets had missing or incomplete information, affecting the quality of analysis.
+2. The analysis did not consider external factors such as socioeconomic status, which could impact healthcare outcomes.
 
 
