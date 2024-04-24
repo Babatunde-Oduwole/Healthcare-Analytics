@@ -43,7 +43,7 @@ EDA involved exploring the sales data to answer key questions, such as:
 1. What was the total number of patients?
 2. What was the total number of doctors?
 3. What was the total amount of billing per month?
-4. What was the total amount of insuranve provider by gender?
+4. What was the total amount of insurance provider by gender?
 5. What was the total categories of blood group by gender?
 6. What was the admission type by gender?
 7. What was the medical condition by gender?
